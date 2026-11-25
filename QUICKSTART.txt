@@ -1,0 +1,56 @@
+PICO MEDIA + ETS2 DASHBOARD - QUICK START
+==========================================
+
+Your controller's screen shows the music playing on your PC (album art, title,
+artist), the date and time, and - while Euro Truck Simulator 2 runs - a live
+truck dashboard (speed, speed limit, cruise control, gear, RPM, blinkers, fuel,
+lights, trip info).
+
+Windows 10 or 11 is needed. No Python or other installs.
+
+
+1) THE PC APP  (folder "2 PC app")
+------------------------------------
+- Plug in the controller.
+- Double-click PicoMediaBridge.exe.
+    If Windows says "Windows protected your PC": click "More info", then
+    "Run anyway". It only asks once.
+- A green icon appears in the system tray (next to the clock - check the ^
+  arrow if you can't see it). Right-click it and tick "Start with Windows" so
+  it runs automatically from now on.
+- Play some music. The song appears on the controller within a few seconds.
+
+
+2) THE ETS2 DASHBOARD  (folder "3 ETS2 plugin (optional)")
+-----------------------------------------------------------
+- Double-click "Install plugin.bat". It finds ETS2 (and ATS) in Steam and
+  installs the telemetry plugin.
+- Start the game and click OK on the "advanced SDK features" message.
+- The dashboard appears on the controller while you drive.
+
+
+3) CONTROLLER SOFTWARE  (folder "1 Controller - copy to CIRCUITPY")
+--------------------------------------------------------------------
+Only needed to update or repair the controller - it comes ready to use.
+- Plug in the controller; a drive called CIRCUITPY appears.
+- Copy everything inside the "1 Controller - copy to CIRCUITPY" folder onto
+  CIRCUITPY, replacing the old files.
+- Unplug the controller and plug it back in.
+If CIRCUITPY does not appear, the controller needs CircuitPython 10 for
+"Raspberry Pi Pico 2" first (circuitpython.org): hold the BOOTSEL button while
+plugging in, and drag the downloaded .uf2 file onto the drive that appears.
+
+
+TROUBLESHOOTING
+---------------
+- Screen says "Waiting for PC...":
+    Is PicoMediaBridge running (tray icon)? Is the controller plugged in?
+    Close any other program that might use the controller's COM port.
+- No dashboard while driving:
+    Run "Install plugin.bat" again and check for the "advanced SDK features"
+    message when the game starts.
+- Something else:
+    Right-click the tray icon > "Open log folder" and send log.txt to the
+    developer.
+
+The licenses of included third-party software are in the "licenses" folder.
